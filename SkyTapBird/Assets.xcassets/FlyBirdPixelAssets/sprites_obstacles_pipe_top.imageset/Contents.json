@@ -1,0 +1,23 @@
+{
+  "images": [
+    {
+      "idiom": "universal",
+      "scale": "1x",
+      "filename": "pipe_top_32x160.png"
+    },
+    {
+      "idiom": "universal",
+      "scale": "2x",
+      "filename": "pipe_top_64x320@2x.png"
+    },
+    {
+      "idiom": "universal",
+      "scale": "3x",
+      "filename": "pipe_top_96x480@3x.png"
+    }
+  ],
+  "info": {
+    "author": "xcode",
+    "version": 1
+  }
+}

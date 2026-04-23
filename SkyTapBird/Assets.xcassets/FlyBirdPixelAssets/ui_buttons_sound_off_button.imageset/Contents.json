@@ -1,0 +1,22 @@
+{
+  "images": [
+    {
+      "idiom": "universal",
+      "scale": "1x",
+      "filename": "sound_off_button_40x24.png"
+    },
+    {
+      "idiom": "universal",
+      "scale": "2x",
+      "filename": "sound_off_button_80x48@2x.png"
+    },
+    {
+      "idiom": "universal",
+      "scale": "3x"
+    }
+  ],
+  "info": {
+    "author": "xcode",
+    "version": 1
+  }
+}
