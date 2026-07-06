@@ -55,7 +55,19 @@ xcodebuild test -project SkyTapBird.xcodeproj -scheme SkyTapBird -destination 'p
 
 The app code lives in `SkyTapBird/`, with unit tests in `SkyTapBirdTests/` and UI tests in `SkyTapBirdUITests/`.
 
+## Architecture
+
+The game uses a coordinator-style SpriteKit architecture:
+
+- `GameScene` coordinates the current run and SpriteKit contacts.
+- `GameSession` owns pure gameplay state transitions.
+- `BirdNode` owns bird physics and animation.
+- `PipeSpawner`, `PipeLayoutCalculator`, and `PipePairNode` own obstacle generation.
+- `GameHUDNode` and `GameOverPanelNode` own presentation.
+- `HighScoreStoring` and `HapticsProviding` isolate platform services.
+
+The deployment target remains iOS 17.0. The scene uses the current view size, safe-area insets, and scene lifecycle callbacks so it can be validated against the iOS 27 SDK without dropping older supported systems.
+
 ## Privacy and signing
 
 This repository intentionally does not include a personal Apple Team ID. Every developer should sign the app with their own Apple ID or Apple Developer account before installing it on a device.
-

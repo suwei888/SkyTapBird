@@ -2,37 +2,42 @@
 //  GameConfig.swift
 //  SkyTapBird
 //
-//  Created by Codex on 2026/4/20.
-//
 
-import Foundation
 import CoreGraphics
+import Foundation
 
 enum GameConfig {
-    static let logicalSize = CGSize(width: 390, height: 844)
+    static let fallbackSceneSize = CGSize(width: 390, height: 844)
 
     static let groundHeight: CGFloat = 118
-    static let hudTopInset: CGFloat = 72
+    static let hudTopPadding: CGFloat = 38
     static let sideInset: CGFloat = 26
 
     static let birdSize = CGSize(width: 34, height: 26)
-    static let birdStartPoint = CGPoint(x: 122, y: 500)
+    static let birdStartXFraction: CGFloat = 0.31
+    static let birdStartYFraction: CGFloat = 0.59
     static let birdFlapVelocity: CGFloat = 370
     static let birdMaxFallVelocity: CGFloat = -520
     static let birdHoverDistance: CGFloat = 9
 
     static let pipeWidth: CGFloat = 64
     static let pipeGap: CGFloat = 172
-    static let pipeMinimumCenterY: CGFloat = 330
-    static let pipeMaximumCenterY: CGFloat = 575
+    static let pipeMinimumHeight: CGFloat = 80
     static let pipeSpawnDelay: TimeInterval = 1.15
     static let pipeSpawnInterval: TimeInterval = 1.65
     static let pipeTravelDuration: TimeInterval = 4.2
 
     static let restartDelay: TimeInterval = 0.45
 
-    static let pipePairNodeName = "pipePair"
-    static let scoreNodePrefix = "score-"
+    enum NodeName {
+        static let pipePair = "pipePair"
+        static let scorePrefix = "score-"
+    }
+
+    enum ActionKey {
+        static let birdHover = "bird.hover"
+        static let birdFlap = "bird.flap"
+    }
 
     enum PhysicsCategory {
         static let bird: UInt32 = 1 << 0
